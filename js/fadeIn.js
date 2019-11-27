@@ -31,23 +31,30 @@ onload = function () {
 
     function setFadeIn(arr, direction) {
 
-        
-        document.body.style.height = document.body.offsetHeight;
-        document.body.style.width = document.body.offsetWidth;
-        // document.body.style.overflow='hidden'
+        var offsetLeft = 0;
+        var offsetRight = 0;
+        var browserWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        // var browserWidth=document.body.offsetWidth;
 
+        // alert(document.body.offsetWidth);
         for (i = 0; i < arr.length; i++) {
+
             // arr[i].style.position = 'relative';
             arr[i].style.opacity = 0;
             arr[i].style.filter = 'alpha(opacity:0)';
             arr[i].style.transition = '0s';
 
+            offsetLeft = arr[i].offsetLeft;
+            offsetRight = browserWidth - (arr[i].offsetLeft+arr[i].offsetWidth);
+
+            
+            
             switch (direction) {
                 case 'left':
-                    arr[i].style.transform = 'translate(-50px,0)';
+                    arr[i].style.transform = 'translate('+ (-offsetLeft)+'px, 0)';
                     break;
                 case 'right':
-                    arr[i].style.transform = 'translate(50px,0)';
+                    arr[i].style.transform = 'translate('+ offsetRight+'px,0)';
                     break;
                 case 'top':
                     arr[i].style.transform = 'translate(0,-50px)';
@@ -61,16 +68,20 @@ onload = function () {
             }
             // switch (direction) {
             //     case 'left':
-            //         arr[i].style.margin = '0 0 0 -100px';
+            //         arr[i].style.transformOrigin = 'left';
+            //         arr[i].style.transform = 'scale(0, 1)';
             //         break;
             //     case 'right':
-            //         arr[i].style.margin = '0 -100px 0 0';
+            //         arr[i].style.transformOrigin = 'right';
+            //         arr[i].style.transform = 'scale(0, 1)';
             //         break;
             //     case 'top':
-            //         arr[i].style.margin = '-100px 0 0 0';
+            //         arr[i].style.transformOrigin = 'top';
+            //         arr[i].style.transform = 'scale(1, 0)';
             //         break;
             //     case 'bottom':
-            //         arr[i].style.margin = '0 0 -100px 0';
+            //         arr[i].style.transformOrigin = 'bottom';
+            //         arr[i].style.transform = 'scale(1, 0)';
             //         break;
             //     default:
             //         break;
@@ -97,10 +108,15 @@ onload = function () {
             if (triggerHeight > arr[i].offsetTop) {
                 // arr[i].style.display='block';
                 arr[i].style.transform = 'translate(0,0)';
+                // arr[i].style.transform = 'scale(1, 1)';
                 // arr[i].style.margin = '0'
                 arr[i].style.transition = '1s'
                 arr[i].style.opacity = '1';
                 arr[i].style.filter = 'alpha(opacity:100)';
+
+
+
+                
                 
             }
         }
