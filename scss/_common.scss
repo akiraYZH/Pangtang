@@ -276,7 +276,8 @@ nav {
     /******* Start of step *******/
     .step_section {
         margin: 85px auto 100px;
-        padding: 0 30px;
+        // padding: 0 30px;
+        width:96%;
         box-sizing: border-box;
         width: 100%;
         font-size: 0;
@@ -336,7 +337,10 @@ nav {
     /******* End of step *******/
 
     .section {
-        padding: 0 30px 80px;
+        // padding: 0 30px 80px;
+        width:96%;
+        margin: 0 auto 80px;
+        // margin-bottom: 80px;
         box-sizing: border-box;
 
 
@@ -808,6 +812,7 @@ footer {
 
 
             .section {
+                // padding:0 0 80px;
                 .section_box {
 
                     .game {

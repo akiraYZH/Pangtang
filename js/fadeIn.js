@@ -107,10 +107,11 @@ onload = function () {
         for (i = 0; i < arr.length; i++) {
             if (triggerHeight > arr[i].offsetTop) {
                 // arr[i].style.display='block';
+                arr[i].style.transition = '1s'
                 arr[i].style.transform = 'translate(0,0)';
                 // arr[i].style.transform = 'scale(1, 1)';
                 // arr[i].style.margin = '0'
-                arr[i].style.transition = '1s'
+                
                 arr[i].style.opacity = '1';
                 arr[i].style.filter = 'alpha(opacity:100)';
 

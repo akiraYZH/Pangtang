@@ -180,7 +180,7 @@ nav {
   /******* End of step *******/ }
   .content_frame .step_section {
     margin: 85px auto 100px;
-    padding: 0 30px;
+    width: 96%;
     box-sizing: border-box;
     width: 100%;
     font-size: 0;
@@ -221,7 +221,8 @@ nav {
       color: #d6dadc;
       font-weight: 500; }
   .content_frame .section {
-    padding: 0 30px 80px;
+    width: 96%;
+    margin: 0 auto 80px;
     box-sizing: border-box; }
     .content_frame .section .title {
       font-size: 35px;
