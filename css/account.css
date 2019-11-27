@@ -667,7 +667,7 @@ footer {
 
 .form {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 300px;
   position: relative; }
   .form #wechat, .form #play_game, .form #lottery, .form #fill, .form #w_form, .form #p_form, .form #l_form, .form #f_form {
     display: none; }

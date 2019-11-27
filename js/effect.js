@@ -19,6 +19,9 @@ onload= function(){
 
 function Carousel(id){
 
+    if(!document.querySelector(id)){
+        return;
+    }
     this.obj = document.querySelector(id);
     this.oDotList = this.obj.querySelector('#dot');
     this.oCarousel_bar= this.obj.querySelector('#carousel_bar');
