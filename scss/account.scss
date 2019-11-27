@@ -1,0 +1,392 @@
+@charset "UTF-8";
+
+@import "_reset";
+@import "_common";
+
+
+$bg_line_color:#f7f7f7;
+$main_color:#08cacc;
+$nav_h_fs:20px;
+$nav_h_color:black;
+
+$nav_h_sub:17px;
+$nav_sub_color:#8d8d8d;
+
+$title_d_size:12px;
+$text_size:14px;
+$sub_color:#9a9c9d;
+$sub_fs:18px;
+
+$game_box_bgc:#eaeaea;
+@mixin hover {
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.path_section{
+    width:100%;
+    height:70px;
+    background-color: $main_color;
+    line-height: 70px;
+    .path{
+        margin-left: 3.5%;
+        a, .icon-Arrowright{
+            font-size: 18px;
+            color:white;
+        }
+    }
+}
+
+.menu_section{
+    position: relative;
+    height:115px;
+    width:100%;
+    line-height: 115px;
+    background-color:#fccf00;
+    margin-bottom: 90px;
+    &::before{
+        content:"";
+        display: block;
+        height: 13px;
+        width:100%;
+        background-image: url("../img/wave.png");
+        background-repeat: repeat-x;
+        // background: 
+        position: absolute;
+        bottom: -12px;
+        background-size: 97px 13px;
+        
+        
+    }
+
+    .menu{
+        width:100%;
+        height:100%;
+        text-align: center;
+
+        
+        
+        li{
+            display: inline-block;
+            height:35px;
+            vertical-align: middle;
+            line-height: 35px;
+            margin: 0 10px;
+            &.active>a{
+                background-color:$main_color;
+                color:white;
+            }
+            a{
+                display: inline-block;
+                // width:200px;
+                height:35px;
+                background-color: #fff;
+                color:#414141;
+                padding: 0 20px;
+                border-radius: 18px;
+                font-size: 14px;
+            }
+        }
+
+    }
+
+    .avatar_section{
+        position: absolute;
+        right:1%;
+        top:0;
+        // width:60px;
+        // height:60px;
+        font-size: 0;
+        
+        h3{
+            display: inline-block;
+            font-size: 24px;
+            vertical-align:middle;
+            color: white;
+            font-weight: lighter;
+
+        }
+
+        .avatar{
+            display: inline-block;
+            width:60px;
+            height:60px;
+            vertical-align:middle;
+            margin-left: 10px;
+            border-radius: 50%;
+            position: relative;
+            &:hover::before{
+                transform:translate(-50%,-50%) rotate(1080deg);
+            }
+            img{
+                width:100%;
+                z-index: 2;
+                position: relative;
+
+            }
+            &::before{
+                content:"";
+                display: block;
+                position: absolute;
+                top:50%;
+                left: 50%;
+                transform:translate(-50%,-50%);
+                // transform-origin: center;
+                width:68px;
+                height:68px;
+                background-image: linear-gradient(-45deg, #52cc8f 50%, transparent 0);
+                border-radius: 50%;
+                z-index: 0;
+                transition: 1s ease-in-out;
+                
+
+
+
+
+            }
+            &::after{
+                content:"";
+                display: block;
+                position: absolute;
+                top:50%;
+                left: 50%;
+                transform:translate(-50%,-50%);
+                // transform-origin: center;
+                width:63px;
+                height:63px;
+                // background-image: linear-gradient(45deg, #52cc8f 50%, transparent 0);
+                background-color: #fccf00;
+                border-radius: 50%;
+                z-index: 1;
+                
+            }
+
+        }
+    }
+
+}
+
+
+
+.form{
+    max-width:800px;
+    margin: 0 auto;
+    position: relative;
+
+
+
+
+    #wechat, #play_game,#lottery, #fill, #w_form, #p_form, #l_form, #f_form{
+        display: none;
+
+    }
+    #wechat:checked~div>label[for=wechat]{
+        color: $main_color;
+    }
+    #play_game:checked~div>label[for=play_game]{
+        color: $main_color;
+    }
+    #lottery:checked~div>label[for=lottery]{
+        color: $main_color;
+    }
+    #fill:checked~div>label[for=fill]{
+        color: $main_color;
+    }
+
+    #wechat:checked~.col-r>#w_form{
+        display: block;
+    }
+    #play_game:checked~.col-r>#p_form{
+        display: block;
+    }
+    #lottery:checked~.col-r>#l_form{
+        display: block;
+    }
+    #fill:checked~.col-r>#f_form{
+        display: block;
+    }
+
+
+
+
+    .col-l{
+        width:38%;
+        border-right: 2px dashed #d6d6d6;
+        label{
+            display: block;
+            cursor: pointer;
+            color:#b3b3b3;
+            
+            .iconfont{
+                display: inline-block;
+                font-size: 100px;
+                vertical-align: middle;
+                margin-right: 5%;
+                
+                &.icon-form-pen{
+                    transform: scale(.8);
+                }
+            }
+            span{
+                display:inline-block;
+                vertical-align: middle;
+                font-size: 14px;
+            }
+        }
+
+        .icon-xiajiantou-copy-copy-copy-copy{
+            display: block;
+            width:100%;
+            text-align: center;
+            font-size: 33px;
+            color:#d6d6d6;
+            // margin: 10px 0;
+            
+        }
+    }
+    
+    .col-r{
+        width:61%;
+        form{
+            width:50%;
+            margin: 0 auto;
+            .row{
+                width:100%;
+                background-color: #f7f7f7;
+                // height: 55px;
+                padding: 20px 5%;
+                margin-bottom: 30px;
+                min-width: 55px;
+                box-shadow: 1px 1px 2px #eeeeee inset;
+                border-radius: 3px;
+                &:last-of-type{
+                    margin-bottom: 100px;
+                }
+                
+                p{
+                    width:30%;
+                    // height:55px;
+                    vertical-align:middle;
+                    line-height: 16px;
+                    display: inline-block;
+                    color:#b3b3b3;
+                    font-size: 16px;
+                }
+                input{
+                    vertical-align:middle;
+                    display: inline-block;
+                    min-width: 100px;
+                    // height: 55px;
+                    font-size: 16px;
+                    color:#b3b3b3;
+                    width: 60%;
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+                }
+            }
+
+            input[type=submit]{
+                position: absolute;
+                bottom: 0;
+                width:120px;
+                height:40px;
+                border-radius: 20px;
+                border:1px solid #b3b3b3;
+                background-color: transparent;
+                color: #b3b3b3;
+                transition: .3s;
+                outline: none;
+                &:hover{
+                    transform: scale(1.1);
+                    background-color: $main_color;
+                    border: none;
+                    color:white;
+
+                }
+            }
+        }
+    }
+
+    
+}
+
+@media screen and (max-width:1200px){
+    .menu_section{
+        // height:200px;
+    
+        .menu{
+            text-align: left;
+            li{
+
+                margin: 0 3px;
+                &:first-of-type{
+                    margin-left: 3%;
+                }
+
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:800px){
+    .menu_section{
+        height:250px;
+    
+        .menu{
+            padding-top: 120px ;
+            text-align: left;
+            line-height: normal;
+            li{
+                display: inline-block;
+                height:35px;
+                // vertical-align: middle;
+                line-height: 35px;
+                margin: 0 0 10px 3%;
+
+            
+            }
+        }
+    }
+
+    .form{
+
+        .col-l{
+            width:38%;
+            border-right: 2px dashed #d6d6d6;
+            label{
+                display: block;
+                width: 100%;
+                // text-align: center;
+                
+                .iconfont{
+                    width:80%;
+                    display: block;
+                    text-align: center;
+                    margin: 0 auto;
+                    font-size: 100px;
+                    
+                }
+                span{
+                    display:block;
+                    margin: 0 auto;
+                    width:80%;
+                    text-align: center;
+
+                }
+            }
+    
+        }
+        .col-r{
+            
+            form{
+                width:80%;
+            }
+        }
+    }
+}
+
+
+

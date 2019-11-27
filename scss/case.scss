@@ -1,0 +1,241 @@
+@charset "UTF-8";
+
+@import "_reset";
+@import "_common";
+
+
+$bg_line_color:#f7f7f7;
+$main_color:#08cacc;
+$nav_h_fs:20px;
+$nav_h_color:black;
+
+$nav_h_sub:17px;
+$nav_sub_color:#8d8d8d;
+
+$title_d_size:12px;
+$text_size:14px;
+$sub_color:#9a9c9d;
+$sub_fs:18px;
+
+$game_box_bgc:#eaeaea;
+
+@mixin hover {
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+body{
+    &:before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 2215px;
+        // padding-bottom: 9999px;
+        // margin-bottom: -9999px;
+        background:
+            url("../img/cable.png") no-repeat,
+            url("../img/cable_hand.png") no-repeat;
+        background-position: 0 63%,  100% 33%;
+        background-size: 15% auto,15% auto;
+        z-index: -1;
+    }
+
+
+
+    .banner{
+        width:100%;
+        overflow: hidden;
+        
+        img{
+            width:100%;
+            display: block;
+            
+        }
+    }
+
+
+    .content_frame{
+        .section{
+            padding-bottom: 40px;
+            .filter_list{
+                margin: 70px auto 135px;
+                text-align: center;
+                
+                li{
+                    display: inline-block;
+
+                    
+                    button{
+                        font-size: 16px;
+                        padding: 10px 25px;
+                        border:1px solid $sub_color;
+                        border-radius: 30px;
+                        background-color: white;
+                        color:black;
+                        cursor: pointer;
+                        outline: none;
+                        margin: 0 10px;
+                        transition: .3s;
+                        @include hover;
+                        &.active{
+                            background-image: linear-gradient(to top, #0e9f91,$main_color);
+                            color:white;
+                            border: none;
+                        }
+                    }
+                }
+            }
+
+            .paging{
+                text-align: center;
+                font-size: 0;
+                vertical-align: top;
+                margin-top: 50px;
+                a, ul>li{
+                    transition: .3s;
+                    @include hover;
+                }
+                a{
+                    color:#6e6e6e;
+                    font-size: 16px;
+                    display: inline-block;
+                    vertical-align: middle;
+
+                    &.active{
+                        color:$main_color;
+                    }
+                }
+                .icon-arrow, .icon-arrow1{
+                    display: inline-block;
+                    border:1px solid #6e6e6e;
+                    border-radius: 50%;
+                    height: 40px;
+                    width:40px;
+                    line-height: 40px;
+                    margin: 0 10px;
+                }
+
+                ul{
+                    display: inline-block;
+                    border: 1px solid #6e6e6e;
+                    height:40px;
+                    padding: 0 25px;
+                    box-sizing: border-box;
+                    border-radius: 20px;
+                    font-size: 16px;
+                    line-height: 40px;
+                    vertical-align: middle;
+                    
+                    // width:100px;
+                    li{
+                        display: inline-block;
+                        margin: 0 2px;
+                        height:40px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+
+@media screen and (max-width: 700px) {
+    body{
+        .content_frame{
+            .section{
+                .filter_list{
+                    margin: 70px 0;
+                    text-align: left;
+                    
+                    li{
+                        display: block;
+                        // list-style-type: circle;
+                        margin: 10px 0;
+                        button{
+                            text-align: left;
+                            
+                            width:100%;
+                            padding: 5px 20px;
+                            
+                            border:none;
+                            border-bottom: 1px solid $sub_color;
+                            border-top: 1px solid $sub_color;
+                            border-radius: 30px;
+                            background-image: none;
+                            background-color: transparent;
+                            color:$main_color;
+                            cursor: pointer;
+                            outline: none;
+                            margin: 0 10px;
+                            transition: .3s;
+                            &:hover{
+                                transform: scale(1.1);
+                                background-color: $main_color;
+                                color:white;
+                                border-bottom: 1px solid $main_color;
+                                border-top: 1px solid $main_color;
+                            }
+                        }
+                    }
+                }
+
+
+                .paging{
+                    text-align: center;
+                    font-size: 0;
+                    vertical-align: top;
+                    width:110%;
+                    margin-left: -5%;
+                    margin-top: 20px;
+                    
+                    a, ul>li{
+                        transition: .3s;
+                        @include hover;
+                    }
+                    a{
+                        color:#6e6e6e;
+                        font-size: 16px;
+                        display: inline-block;
+                        vertical-align: middle;
+    
+                        &.active{
+                            color:$main_color;
+                        }
+                    }
+                    .icon-arrow, .icon-arrow1{
+                        display: inline-block;
+                        border:1px solid #6e6e6e;
+                        border-radius: 50%;
+                        height: 30px;
+                        width:30px;
+                        line-height: 30px;
+                        margin: 0 5px;
+                    }
+    
+                    ul{
+                        display: inline-block;
+                        border: 1px solid #6e6e6e;
+                        height:30px;
+                        padding: 0 10px;
+                        box-sizing: border-box;
+                        border-radius: 20px;
+                        font-size: 16px;
+                        line-height: 29px;
+                        vertical-align: middle;
+                        
+                        // width:100px;
+                        li{
+                            display: inline-block;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
