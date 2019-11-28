@@ -385,6 +385,7 @@ nav {
                 margin: 0 auto 20px;
                 border-radius: 3px;
                 overflow: hidden;
+                
 
                 .game_description {
                     padding: 18px;
@@ -824,9 +825,11 @@ footer {
 
                     .game {
                         display: block;
-                        // margin: 0 auto;
+                        // display: none;
+                        margin-bottom: 50px;
                         float: none;
                         width: 80%;
+                        
                     }
 
                     .row {
@@ -835,7 +838,7 @@ footer {
                             // display: block;
                             // // margin: 0 auto;
                             // float: none;
-                            width: 100%;
+                            width: 80%;
                             height: 400px;
                             text-align: left;
                             font-size: 0;

@@ -117,6 +117,7 @@ body{
                     button{
                         font-size: 16px;
                         padding: 10px 25px;
+                        box-sizing: border-box;
                         border:1px solid $sub_color;
                         border-radius: 30px;
                         background-color: white;
@@ -218,16 +219,18 @@ body{
   
             .section{
                 .filter_list{
-                    margin: 70px 0;
+                    margin: 70px auto;
                     text-align: left;
+                    width:60%;
+                    
                     
                     li{
                         display: block;
-                        width:80%;
+                        
                         // list-style-type: circle;
                         margin: 10px auto;
                         button{
-                            text-align: left;
+                            text-align: center;
                             
                             width:100%;
                             padding: 5px 20px;
@@ -259,8 +262,8 @@ body{
                     text-align: center;
                     font-size: 0;
                     vertical-align: top;
-                    width:110%;
-                    margin-left: -5%;
+                    width:100%;
+                    // margin: ;
                     margin-top: 20px;
                     
                     a, ul>li{

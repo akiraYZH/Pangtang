@@ -4,13 +4,15 @@ onload= function(){
 
     new Carousel('#carousel');
 
-
+    
 
 
     var aFl = document.querySelectorAll('.fade-in-l');
     var aFr = document.querySelectorAll('.fade-in-r');
     var aFt = document.querySelectorAll('.fade-in-t');
     var aFb = document.querySelectorAll('.fade-in-b');
+    
+    var timer = null;
 
 
     setFadeIn(aFl, 'left');
@@ -19,15 +21,22 @@ onload= function(){
     setFadeIn(aFb, 'bottom');
 
 
+    var onScroll = true;
 
-
-
+    setInterval(function(){
+        onScroll = true;
+    }, 200)
 
     document.onscroll = function () {
-        fadeIn(aFl);
-        fadeIn(aFr);
-        fadeIn(aFt);
-        fadeIn(aFb);
+
+        if(onScroll){
+            fadeIn(aFl);
+            fadeIn(aFr);
+            fadeIn(aFt);
+            fadeIn(aFb);
+            onScroll=false;
+        }
+        
 
     }
 
@@ -52,7 +61,7 @@ onload= function(){
             offsetRight = browserWidth - (arr[i].offsetLeft + arr[i].offsetWidth);
 
 
-
+            // alert(arr[i].offsetLeft);
             switch (direction) {
                 case 'left':
                     arr[i].style.transform = 'translate(' + (-offsetLeft) + 'px, 0)';
@@ -138,6 +147,13 @@ onload= function(){
 
 
 
+function getStyle(obj, name){
+	if(obj.currentStyle){
+		return obj.currentStyle[name];
+	}else{
+		return getComputedStyle(obj, false)[name];
+	}
+}
 
 
 

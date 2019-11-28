@@ -499,10 +499,11 @@ footer {
         transform: rotate(90deg); }
     body .content_frame .section .section_box .game {
       display: block;
+      margin-bottom: 50px;
       float: none;
       width: 80%; }
     body .content_frame .section .section_box .row .case {
-      width: 100%;
+      width: 80%;
       height: 400px;
       text-align: left;
       font-size: 0;
@@ -633,6 +634,7 @@ body .content_frame .section {
       body .content_frame .section .filter_list li button {
         font-size: 16px;
         padding: 10px 25px;
+        box-sizing: border-box;
         border: 1px solid #9a9c9d;
         border-radius: 30px;
         background-color: white;
@@ -695,14 +697,14 @@ body .content_frame .section {
       display: inline-block;
       line-height: 14px; }
   body .content_frame .section .filter_list {
-    margin: 70px 0;
-    text-align: left; }
+    margin: 70px auto;
+    text-align: left;
+    width: 60%; }
     body .content_frame .section .filter_list li {
       display: block;
-      width: 80%;
       margin: 10px auto; }
       body .content_frame .section .filter_list li button {
-        text-align: left;
+        text-align: center;
         width: 100%;
         padding: 5px 20px;
         border: none;
@@ -726,8 +728,7 @@ body .content_frame .section {
     text-align: center;
     font-size: 0;
     vertical-align: top;
-    width: 110%;
-    margin-left: -5%;
+    width: 100%;
     margin-top: 20px; }
     body .content_frame .section .paging a, body .content_frame .section .paging ul > li {
       transition: .3s; }

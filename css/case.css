@@ -499,10 +499,11 @@ footer {
         transform: rotate(90deg); }
     body .content_frame .section .section_box .game {
       display: block;
+      margin-bottom: 50px;
       float: none;
       width: 80%; }
     body .content_frame .section .section_box .row .case {
-      width: 100%;
+      width: 80%;
       height: 400px;
       text-align: left;
       font-size: 0;
@@ -682,8 +683,7 @@ body .content_frame .section {
     text-align: center;
     font-size: 0;
     vertical-align: top;
-    width: 110%;
-    margin-left: -5%;
+    width: 100%;
     margin-top: 20px; }
     body .content_frame .section .paging a, body .content_frame .section .paging ul > li {
       transition: .3s; }
