@@ -395,6 +395,7 @@ footer {
     bottom: 0;
     right: 0; }
   footer p {
+    width: 100%;
     color: white;
     display: inline-block;
     margin: 0 auto;
