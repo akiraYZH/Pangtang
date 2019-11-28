@@ -654,10 +654,10 @@ body:before {
         transform: translate(-50%, -50%); }
       .kv .frame .phone .carousel {
         position: absolute;
-        left: 9.4%;
-        top: 23.1%;
-        height: 52%;
-        width: 82.5%;
+        left: 6.4%;
+        top: 21.1%;
+        height: 55%;
+        width: 87.5%;
         font-size: 0; }
         .kv .frame .phone .carousel .carousel_frame {
           position: relative;
@@ -829,22 +829,25 @@ body:before {
       .kv .frame .phone {
         width: 80%;
         min-width: 220px;
-        margin: 0 auto;
+        margin: 0 auto 100px;
         position: relative;
         left: 0;
         top: 0;
-        transform: translate(0%, 0%);
-        padding-bottom: 40px;
-        height: inherit; }
+        transform: translate(0%, 0%); }
+        .kv .frame .phone::before {
+          content: "";
+          display: block;
+          padding-top: 195.5%;
+          background-color: transparent; }
         .kv .frame .phone .phone_img {
           width: 100%;
-          position: static;
+          position: absolute;
           left: 0;
           top: 0;
           transform: translate(0, 0); }
         .kv .frame .phone .carousel {
-          top: 10.1%;
-          height: 71%; }
+          top: 11.1%;
+          height: 77%; }
           .kv .frame .phone .carousel .dot {
             top: 120%; }
       .kv .frame .know_more_section {
