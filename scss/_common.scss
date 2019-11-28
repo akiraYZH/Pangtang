@@ -595,7 +595,9 @@ footer {
     // bottom: 0;
     margin-top: 30px;
     line-height: 80px;
-    vertical-align: middle;
+    // vertical-align: middle;
+   
+    // vertical-align: middle;
 
 
 
@@ -613,10 +615,14 @@ footer {
 
     p {
         color: white;
+        display: inline-block;
+        margin: 0 auto;
         text-align: center;
+        line-height: normal;
         font-size: 12px;
         position: relative;
         z-index: 1;
+        vertical-align: middle;
     }
 }
 
