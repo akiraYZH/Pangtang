@@ -3,6 +3,7 @@ onload= function(){
 
 
     new Carousel('#carousel');
+    new Carousel('#carousel')
 
     
 

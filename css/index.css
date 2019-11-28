@@ -842,8 +842,11 @@ body:before {
           left: 0;
           top: 0;
           transform: translate(0, 0); }
-        .kv .frame .phone .carousel .dot {
-          top: 140%; }
+        .kv .frame .phone .carousel {
+          top: 10.1%;
+          height: 71%; }
+          .kv .frame .phone .carousel .dot {
+            top: 120%; }
       .kv .frame .know_more_section {
         position: static;
         left: 0%;
