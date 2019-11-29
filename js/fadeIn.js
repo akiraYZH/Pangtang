@@ -1,5 +1,0 @@
-onload = function () {
-
-    
-
-}

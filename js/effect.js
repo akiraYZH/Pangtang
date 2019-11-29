@@ -41,7 +41,9 @@ onload= function(){
 
     }
 
-
+    // var fadeIn = {
+    //     fls:'opacity = 0;filter = alpha(opacity:0);transition = 0s;',
+    //     frs:}
 
     function setFadeIn(arr, direction) {
 
@@ -80,28 +82,7 @@ onload= function(){
                     break;
 
             }
-            // switch (direction) {
-            //     case 'left':
-            //         arr[i].style.transformOrigin = 'left';
-            //         arr[i].style.transform = 'scale(0, 1)';
-            //         break;
-            //     case 'right':
-            //         arr[i].style.transformOrigin = 'right';
-            //         arr[i].style.transform = 'scale(0, 1)';
-            //         break;
-            //     case 'top':
-            //         arr[i].style.transformOrigin = 'top';
-            //         arr[i].style.transform = 'scale(1, 0)';
-            //         break;
-            //     case 'bottom':
-            //         arr[i].style.transformOrigin = 'bottom';
-            //         arr[i].style.transform = 'scale(1, 0)';
-            //         break;
-            //     default:
-            //         break;
-
-            // }
-
+    
 
 
 
@@ -148,13 +129,7 @@ onload= function(){
 
 
 
-function getStyle(obj, name){
-	if(obj.currentStyle){
-		return obj.currentStyle[name];
-	}else{
-		return getComputedStyle(obj, false)[name];
-	}
-}
+// 
 
 
 

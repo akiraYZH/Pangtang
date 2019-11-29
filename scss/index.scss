@@ -55,7 +55,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
-
+   
+   
     .frame {
         position: absolute;
         width: 89.5%;
@@ -63,6 +64,10 @@ body {
         transform: translateX(-50%);
         // background-color:red;
         height: inherit;
+        
+        
+        
+    
 
         .try_section {
             position: absolute;
@@ -330,6 +335,21 @@ body {
         transform: translateY(5px);
 
     }
+}
+
+
+@keyframes rotate-fade{
+    0%{
+        transform: rotateY(30deg);
+        opacity: 0;
+        
+    }
+    100%{
+        transform: rotateY(0deg) ;
+        opacity: 1;
+        // transform-style: preserve-3d;
+    }
+
 }
 
 @media screen and (max-width: 1200px) {
